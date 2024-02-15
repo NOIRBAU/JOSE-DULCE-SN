@@ -1,0 +1,696 @@
+:root {
+    --light-color: #B3C3D4;
+    --color1: #91a5b9;
+    --color2: #2C3367;
+    --color3: #DFE6ED;
+    --color4: #8496a8;
+    --dark-color: #371F76;
+    --black: #1c1c1c;
+    --white-color: #fbfcfc;
+    --z-modal: 1000;
+}
+/*GENÉRICOS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: 1px;
+    transition: all 0.35s linear;
+    font-size: 19px;
+}
+body {
+    min-height: 100vh;
+    position: relative;
+}
+.caja {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.caratula {
+    height: 700px;
+}
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centrarV{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+}
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+h2 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+h5 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+h6 {
+    font-family: "Italianno", cursive;
+    font-size: 34px;
+    text-align: center;
+    margin: 5px auto;
+}
+.t7 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px;
+}
+.color--blanco {
+    color: var(--white-color);
+}
+hr {
+    color: white;
+    width: 250px;
+}
+.sombra {
+    -webkit-box-shadow: 2px 4px 15px 3px rgba(0,0,0,0.30);
+    -moz-box-shadow: 2px 4px 15px 3px rgba(0,0,0,0.30);
+    box-shadow: 2px 4px 15px 3px rgba(0,0,0,0.30);
+}
+.boton {
+    background: transparent;
+    cursor: pointer;
+    -webkit-box-shadow: 2px 4px 10px 3px rgba(0,0,0,0.50);
+    -moz-box-shadow: 2px 4px 10px 3px rgba(0,0,0,0.50);
+    box-shadow: 2px 4px 10px 3px rgba(0,0,0,0.50);
+    border-radius: 10px;
+    border: 1px solid var(--white-color);
+    padding: 10px 15px;
+    margin: 20px auto;
+}
+.boton1 {
+    background: transparent;
+    cursor: pointer;
+    -webkit-box-shadow: 2px 4px 10px 3px rgba(0,0,0,0.50);
+    -moz-box-shadow: 2px 4px 10px 3px rgba(0,0,0,0.50);
+    box-shadow: 2px 4px 10px 3px rgba(0,0,0,0.50);
+    border-radius: 10px;
+    border: 1px solid var(--white-color);
+    padding: 10px 15px;
+    margin: 0px auto 20px;
+}
+.titSecc {
+    flex-direction: column;
+}
+.titSecc img {
+    width: 600px;
+}
+.texto--esp{
+    margin: 8px 0;
+}
+.ico--gr {
+    width: 150px;
+    margin: 10px;
+}
+.ico--p {
+    height: 70px;
+    width: 70px;
+    margin: 10px 0;
+}
+.margenx5 {
+    margin-bottom: 7px;
+}
+
+/* PORTADA */
+.portada {
+    height: 88vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 15% 35%;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.portada__info {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    height: 88vh;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.portada__info-contenido {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    padding: 25px 0;
+}
+.portada__info img {
+    width: 160px;
+    height: 150px;
+    margin: 0 auto;
+}
+.nosCasamos {
+    font-family: "Bilbo Swash Caps", cursive;
+    font-size: 40px;
+    text-align: center;
+}
+.infoContenedor {
+    width: 90%;
+    flex-direction: column;
+}
+
+/* FRASE */
+.frase {
+    background-color: var(--color1);
+    padding: 10px 5px;
+    margin: 0 auto;
+}
+
+/* SAVE THE DATE */
+.saveTheDate {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/4.jpg);
+    background-image: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 32%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.agendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.saveTheDate img {
+    width: 80%;
+    margin-top: 40px;
+}
+
+/* PADRES */
+.padres {
+    background-color: var(--light-color);
+}
+.padres-flores {
+    width: 100%;
+    height: fit-content;
+    background-image: url(./assets/floresA.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+}
+.padres-principal {
+    padding: 30px 25px;
+    background-image: url(./assets/white-waves.png);
+    background-repeat: repeat;
+    background-size: contain;
+}
+.cont-col {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col--gru {
+    width: 50%;
+}
+.col--gru img{
+    width: 80%;
+}
+
+/* NOSOTROS */
+.nosotros {
+    background-color: var(--color2);
+    padding: 30px 0 0 0;
+}
+.nosotros-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.nosotrosFoto{
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* DONDE Y CUANDO */
+.donde-cuando {
+    background-image: url(./assets/white-waves.png);
+    background-repeat: repeat;
+    background-size: contain;
+}
+.donde-foto {
+    width: 100%;
+    height: 500px;
+    background-image: url(./assets/3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.donde-foto img {
+    width: 60%;
+    margin: 30px 0;
+}
+.donde-info {
+    width: 100%;
+    margin: 0 auto;
+}
+.donde-cont {
+    width: 70%;
+    margin-top: -120px;
+    border-radius: 15px;
+}
+.lugares-foto {
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/recepcion.jpg);
+    background-position: 60% 10%;
+    background-size: cover;
+    border-radius: 15px 10px 0 0;
+    padding-top: 20px;
+}
+.lugares-foto h1 {
+    margin: 0px;
+}
+.conf-asistencia {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 5px 10px 5px;
+}
+.texto-conf {
+    margin-top: 5px;
+}
+
+/* CARÁTULA1 */
+.caratula1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./assets/5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 20%;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.caratula1-frase {
+    font-family: "Allura", cursive;
+    font-size: 30px;
+    line-height: .9;
+    margin-bottom: 7px;
+}
+
+/* DETALLES BODA */
+.contVes {
+    background-color: var(--color1);
+    margin-bottom: 15px;
+    height: 150px;
+}
+.contVes img {
+    height: 150px;
+    margin: 0 auto;
+}
+.detallesBoda {
+    background-color: var(--color2);
+    padding: 20px 0 0 0;
+}
+.caja-detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px 2px 5px;
+}
+/* CARÁTULA2*/
+.caratula2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./assets/6.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 35%;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* INSTAGRAM */
+.instagram {
+    background-color: var(--color1);
+}
+.instaFlores {
+    background-image: url(./assets/floresA.png);
+    background-position: top;
+    background-size: cover;
+    padding: 60px 10px;
+}
+.marcoBlanco {
+    padding: 10px 7px;
+    border: 1.5px white;
+    border-style: solid;
+}
+.instagram-principal {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.8px);
+    -webkit-backdrop-filter: blur(5.8px);
+    padding: 20px 5px;
+}
+.fuenteInsta {
+    font-size: 20px;
+    font-weight: 400;
+}
+.codigoQR {
+    width: 150px;
+    height: 150px;
+    margin: 8px 0 10px 0;
+}
+
+/* DETALLES BODA */
+.centrarV2 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+}
+.centrarV3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARÁTULA 3*/
+.caratula3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./assets/7.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 35%;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* HOSPEDAJE */
+.contHosp {
+    width: 600px;
+    position: relative;
+    padding: 15px 8px;
+    margin: 80px auto 30px auto;
+    border: solid var(--white-color) 1px;
+}
+.fotoHosp {
+    width: 400px;
+    height: 240px;
+    background-image: url(./assets/hospedaje.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: -80px;
+    margin-bottom: 10px;
+}
+.map-responsive2 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.map-responsive2 {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+}
+.noviosFoto {
+    width: 50%;
+}
+
+/* CARRUSEL */
+.galeria {
+    padding: 10px 0px 10px 0px;
+    overflow: hidden;
+    background-image: url(./assets/white-waves.png);
+    background-repeat: repeat;
+    background-size: contain;
+}
+.floresAdo {
+    width: 300px;
+}
+
+/* CARÁTULA 4*/
+.caratula4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./assets/9.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 35%;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* FOGATADA */
+.fogatadaDisplay {
+    display: none;
+}
+.fondo-madera {
+    background-image: url(./assets/madera1.png);
+    background-position: top;
+    background-size: cover;
+    margin: 0;
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.fogatadaDir {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cenaFogatadaT {
+    width: 200px;
+    margin-bottom: 5px;
+}
+.fogata {
+    width: 100%;
+}
+
+/* CARATULA ONDAS */
+.caratula-ondas {
+    height: 100%;
+    background-image: url(./assets/10.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* FOOTER */
+.invChic {
+    background-color: #FAF8F3;
+    padding: 5px 10px 10px 10px;
+}
+.invChic img {
+    width: 80px;
+    margin-top: 8px;
+}
+.invChic p{
+    margin: 10px 5px 8px 5px;
+}
+
+
+
+
+
+
+
+/* BREAK POINTS */
+
+@media only screen and (max-width: 768px) {
+    *{
+        font-size: 14px;
+    }
+h1 {
+    font-size: 22px;
+}
+h6 {
+    font-size: 28px;
+    line-height: .9;
+}
+p {
+    font-size: 16px;
+    line-height: 1.1;
+}
+.caja {
+    width: 100vw;
+}
+.caratula {
+    height: 400px;
+}
+.ico--gr {
+    width: 80px;
+}
+.ico--p {
+    height: 50px;
+    width: 50px;
+}
+/* PORTADA */
+.portada__info img {
+    width: 100px;
+    height: 105px;
+}
+.infoContenedor {
+    width: 100%;
+  }
+.portada h5 {
+    font-size: 20px;
+    margin-top: 5px;
+}
+/* FRASE */
+.frase {
+    padding: 5px 5px;
+    margin: 0 auto;
+}
+/* SAVE THE DATE */
+.saveTheDate img{
+    margin-top: 10px;
+}
+hr {
+    width: 200px;
+}
+/* PADRES */
+.padres-flores {
+    padding: 40px 15px;
+}
+.padres-principal {
+    padding: 15px 10px;
+}
+.titSecc img {
+    width: 200px;
+}
+.col--gru {
+    width: 100%;
+    margin-top: 10px;
+}
+.col--gru {
+    order: 1;
+}
+.col--del {
+    order: 2;
+}
+/* NOSOTROS */
+.nosotrosFoto {
+    margin: 10px 0;
+}
+/* DONDE Y CUANDO */
+.donde-foto {
+    height: 400px;
+}
+.donde-foto img {
+    max-width: 90%;
+}
+.donde-cont {
+    width: 85%;
+    margin-top: -60px;
+}
+.lugares-foto {
+    height: 150px;
+}
+.map-responsive{
+    overflow:hidden;
+    padding: 10px 8px;
+}
+.contMap {
+    width: 100%;
+    height: 230px;
+    position: relative;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+/* CARATULA 1*/
+.caratula1-frase {
+    font-size: 23px;
+}
+/* INSTAGRAM */
+.instaFlores {
+    padding: 20px 10px;
+}
+
+/* HOSPEDAJE */
+.contHosp {
+    width: 90%;
+}
+.fotoHosp {
+    width: 220px;
+    height: 190px;
+}
+.noviosFoto {
+    width: 90%;
+}
+
+/* CARRUSEL */
+.floresAdo {
+    width: 200px;
+    margin-top: 10px;
+}
+}

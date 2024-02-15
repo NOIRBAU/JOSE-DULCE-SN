@@ -1,0 +1,62 @@
+#box {
+    color: white;
+    margin-top: 0px;
+    padding: 5px 5px;
+  }
+  .gradient-border {
+    --borderWidth: 4px;
+    background: var(--color2);
+    position: relative;
+    /* border-radius: var(--borderWidth); */
+  }
+  .contTarjetas {
+    width: 100%;
+    background-color: var(--color2);
+    position: relative;
+    z-index: 2;
+  }
+  .tarjetas {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 5px;
+  }
+  .gradient-border:after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(
+      60deg,
+      #fff,
+      #e4e6f5,
+      #DFE6ED,
+      #B3C3D4, 
+      #96afdd,
+      #5073b8,
+      #364e7c,
+      #2C3367
+    );
+    /* border-radius: calc(2 * var(--borderWidth)); */
+    z-index: 1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

@@ -1,0 +1,76 @@
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100vw; 
+  height: 100%;
+  overflow: auto; 
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+}
+.modalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 40px 10px;
+}
+.modalInfo h2 {
+  margin: 10px;
+}
+.modal img {
+  margin: 0 auto;
+}
+.modal-content {
+  background-color: var(--color1);
+  margin: 25% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 5px solid var(--light-color1);
+  width: 90%; /* Could be more or less, depending on screen size */
+}
+.close {
+  color: white;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* BREAK POINTS */
+
+.modalInfo h2 {
+  font-size: 22px;
+}
+
+/* LIBRO FIRMAS */
+.libroFirmas img {
+  width: 30%;
+}
+
+/* ASISTENCIA */
+.rellenoAsistencia h5 {
+  font-size: 26px;
+}
+.asistenciaContenedores {
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.asistenciaContenedores .boton1 {
+  width: 100px;
+  margin: 0 auto;
+}
+.asistenciaContenedores a {
+  margin: 0 auto;
+}
+.derCont__asistencia {
+  margin-top: 15px;
+}v

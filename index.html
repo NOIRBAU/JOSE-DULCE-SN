@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose-Dulce</title>
+    <meta property="og:image" content="https://invitacionesdigitaleschic.com/wp-content/uploads/2024/02/logo3.png">
+    <meta property="og:title" content="José y Dulce" />
+    <meta property="og:description" content="Invitación de Boda" />
+    <link rel="icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bilbo+Swash+Caps&family=Cinzel+Decorative&family=Italianno&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="clima.css">
+    <link rel="stylesheet" href="carrusel.css">
+    <link rel="stylesheet" href="waves.css">
+    <link rel="stylesheet" href="marco.css">
+    <link rel="stylesheet" href="stars.css">
+    <link rel="stylesheet" href="audioPlayer.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="contador.css">
+    <link rel="stylesheet" href="animaciones.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <section class="load__container loader" id="loader">
+    <div class="stage">
+      <div class="envelope-wrapper">
+        <div class="envelope">
+          <img class="envelope-face envelope-front" src="./assets/envelope1.png">
+          <img class="envelope-face envelope-back" src="./assets/envelope2.png">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="caja centrar audioPlayer">
+    <audio id="player" src="./assets/audio.mp3" loop autoplay="true"></audio>
+    <div class="player">
+        <div class="control">
+            <i class="fas fa-play" id="playbtn"></i>
+        </div>
+        <div class="centrar info">ESCUCHA NUESTRA CANCIÓN</div>
+        <div class="bar">
+            <div id="progress"></div>
+        </div>
+        <div id="current">0:00</div>
+    </div>    
+  </section>
+
+  <section class="caja portada">
+    <div class="container">
+        <div class="centrar portada__info">
+            <div class="portada__info-contenido">
+              <div>
+                <p class="nosCasamos color--blanco">¡Nos casamos!</p>
+              </div>
+              <div class="centrar infoContenedor">
+                <img src="./assets/logo1.png">
+                <div class="contenedor"> 
+                    <div class="contenido">
+                      <div class="contador">
+                        <div class="responsivo1">
+                          <div class="cartel">
+                          <div id="dias"></div>
+                          <div class="h3"><h3>Días</h3></div>
+                        </div>
+                          <div class="cartel">
+                          <div id="horas"></div>
+                          <div class="h3"><h3>Hrs</h3></div>
+                        </div>
+                        </div>
+                        <div class="responsivo2">
+                        <div class="cartel">
+                          <div id="minutos"></div>
+                          <div class="h3"><h3>Min</h3></div>
+                        </div>
+                        <div class="cartel">
+                          <div id="segundos"></div>
+                          <div class="h3"><h3>Seg</h3></div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="color--blanco">12.10.2024</h5>
+              </div>
+            </div>
+            <canvas id="pixie"></canvas> 
+        </div>
+    </div>
+  </section>
+
+  <section class="caja frase">
+    <h6 class="color--blanco">"El día más importante de nuestras vidas ha llegado"</h6>
+  </section>
+
+  <section class="caja caratula saveTheDate">
+    <img src="./assets/savethedate.png">
+    <div class="agendar">
+      <h5 class="color--blanco">José & Dulce</h5>
+      <hr></hr>
+      <p class="color--blanco">12 OCTUBRE, 2024</p>
+      <a href="https://www.addevent.com/event/ZT20248279" target="_blank">
+        <div class="color--blanco boton">AGENDAR EVENTO</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="caja padres">
+    <div class="padres-flores">
+      <div class="padres-principal">
+        <div class="centrar titSecc">
+          <img src="./assets/divider1.png">
+          <p class="texto--esp">Tenemos el honor de invitarlos a nuestro enlace matrimonial en compañía de nuestros padres:</p>
+          <img src="./assets/divider1.png">
+        </div>
+        <div class="centrar cont-col">
+          <div class="centrar col--gru">
+            <img src="./assets/famNovio.png">
+          </div>
+          <div class="col--del">
+            <h2>Madre del Novio</h2>
+            <h6 class="centrar">Judith Guerrero Mendoza</h6>
+          </div>
+        </div>
+        <div class="centrar cont-col">
+          <div class="col--del">
+            <h2>Padres de la Novia</h2>
+            <h6>María Luisa Zurita Torres & Andrés Salas Parra</h6>
+          </div>
+          <div class="centrar col--gru">
+            <img src="./assets/famNovia.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="caja nosotros">
+    <div class="nosotros-info">
+      <div class="centrar titSecc">
+        <img src="./assets/divider1a.png">
+        <h1 class="color--blanco">Nosotros</h1>
+        <img src="./assets/divider1a.png">
+      </div>
+      <img class="ico--gr" src="./assets/anillos.png">
+      <img class="nosotrosFoto" src="./assets/nosotros.png">
+    </div>  
+  </section>
+
+  <section class="caja frase">
+    <h6 class="color--blanco">"Somos una casualidad llena de intensión"</h6>
+  </section>
+
+  <section class="caja donde-cuando">
+    <div class="donde-foto">
+      <img src="./assets/info.png">
+    </div>
+    <article class="centrar donde-info">
+      <div class="sombra donde-cont">
+        <div class="lugares-foto">
+          <h1 class="color--blanco">¿DÓNDE Y CUÁNDO?</h1>
+        </div>
+        <div class="centrarV map-responsive">
+          <h1 class="margenx5">Hotel Río Atlixco</h1>
+          <p class="margenx5">Camino a Río Nexapa S/N, 74358 Atlixco, Pue.</p>
+          <p>17:00 hrs.</p>
+          <a href="https://www.addevent.com/event/ZT20248279" target="_blank">
+            <div class="boton">AGENDAR EVENTO</div>
+          </a>
+          <div class="contMap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15093.576324928923!2d-98.39650863051962!3d18.95819564528632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb7e4e419cf75%3A0xf34497dfde9f1d09!2sHotel%20R%C3%ADo%20Atlixco!5e0!3m2!1ses-419!2smx!4v1707622012127!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="centrarV conf-asistencia">
+      <div class="centrar titSecc">
+        <img src="./assets/divider1.png">
+        <h1>Confirma tu asistencia</h1>
+        <img src="./assets/divider1.png">
+      </div>
+      <p class="texto-conf">Te agradecemos que confirmes tu asistencia lo más pronto posible, para hacerlo da click en el botón para confirmar por WhatsApp.</p>
+      <a href="https://api.whatsapp.com/send?phone=+525573468813&text=%C2%A1Hola!%20Confirmo%20mi%20asistencia%20a%20la%20BODA%20de%20Jos%C3%A9%20y%20Dulce.%20Mi%20nombre%20completo%20es:%20*nombre*%20e%20iremos%20*n%C3%BAm*%20personas." target="_blank">
+        <div class="boton">CONFIRMAR ASISTENCIA</div>
+      </a>
+    </div>
+    <div class="caja centrar gradient-border" id="box">
+      <div class="centrar contTarjetas">
+        <div class="tarjetas">
+          <img class="ico--p" src="./assets/wired-outline-240-glass-of-wine (1).gif">
+          <p class="t7">Recepción</p>
+          <p class="color--blanco">17:00 hrs.</p>
+        </div>
+        <div class="tarjetas">
+          <img class="ico--p" src="./assets/wired-outline-482-church (1).gif">
+          <p class="t7">Ceremonia Religiosa</p>
+          <p class="color--blanco">17:30 hrs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="caja frase">
+    <h6 class="color--blanco">"Amor es una sola palabra, hasta que alguien llega para darle sentido"</h6>
+  </section>
+
+  <section class="caja">
+    <div class="caratula caratula1">
+      <p class="color--blanco caratula1-frase">"Será uno de los días más felices de nuestras vidas y lo hara aún más especial contar con la compañía de ustedes, nuestros familiares y amigos"</p>
+      <p class="color--blanco">-J & D-</p>
+    </div>
+  </section>
+
+  <section class="caja detallesBoda">
+    <div class="centrar titSecc">
+      <img src="./assets/divider1a.png">
+      <h1 class="color--blanco">Código de Vestimenta</h1>
+      <img src="./assets/divider1a.png">
+    </div>
+    <h2 class="color--blanco">Formal de Negro</h2>
+    <div class="centrar contVes">
+      <img src="./assets/vestimenta.png">
+    </div>  
+    <div class="centrar titSecc">
+      <img src="./assets/divider1a.png">
+      <h1 class="color--blanco">Regalos Sugeridos</h1>
+      <img src="./assets/divider1a.png">
+    </div>
+    <div class="caja-detalles">
+      <p class="color--blanco">Su presencia y buenos deseos son suficientes para nosotros, pero en caso que deseen hacernos un obsequio, agradeceríamos nos pudieran apoyar con nuestra luna de miel:</p>
+      <img class="ico--p" src="./assets/wired-outline-948-stock-share.gif">
+        <article>
+          <div class="color--blanco boton" id="myBtn">+DETALLES</div>
+                  <div id="myModal" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <div class="modalInfo">
+                            <img src="./assets/wired-outline-948-stock-share.gif" alt="" class="ico--p">
+                              <h2 class="color--blanco">Transferencia Bancaria</h2>
+                              <p class="color--blanco margenx5">TITULAR: José Antonio Llano Guerrero</p>
+                              <p class="color--blanco margenx5">CUENTA: 1500550647</p>
+                              <p class="color--blanco margenx5">CLABE: 012180015005506473</p>
+                              <h3 class="color--blanco" style="text-align: center;">BBVA</h3>
+                          </div>
+                        </div>
+                  </div>
+        </article> 
+        <div class="centrar titSecc">
+          <img src="./assets/divider1a.png">
+          <h1 class="color--blanco">No Niños</h1>
+          <img src="./assets/divider1a.png">
+        </div>
+        <div class="caja-detalles">
+          <p class="color--blanco">Para una mejor experiencia para todos los presentes, hemos decidido celebrar este momento sin niños. Deseamos que esta decisión no les impida asistir a nuestra celebración.</p>
+          <img class="ico--p" src="./assets/niños.png">
+        </div>   
+      </div>    
+    </section>
+  </section>
+
+  <section class="caja instagram">
+    <div class="instaFlores">
+      <div class="marcoBlanco">
+        <article class="centrarV instagram-principal">
+          <div class="centrar titSecc">
+            <img src="./assets/divider1a.png">
+            <h1 class="color--blanco">#Hashtag del Evento</h1>
+            <img src="./assets/divider1a.png">
+          </div>
+          <img class="ico--p" src="./assets/icons8-instagram-viejo-128.png">
+          <p class="margenx5 color--blanco">Comparte con nosotros  tus fotografías del evento, usando el siguiente #Hashtag en todas tus publicaciones de Instagram y Facebook.</p>
+          <img class="codigoQR" src="./assets/insta.jpg">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="caja">
+    <div class="caratula caratula2">
+      <p class="color--blanco caratula1-frase">"Érase una vez tú y yo..."</p>
+    </div>
+  </section>
+
+  <section class="caja detallesBoda">
+    <div class="centrar titSecc">
+      <img src="./assets/divider1a.png">
+      <h1 class="color--blanco">Recomendaciones</h1>
+      <img src="./assets/divider1a.png">
+    </div>
+    <div class="centrarV">
+      <img class="ico--p" src="./assets/abrigo.png">
+      <p class="color--blanco margenx5">Octubre es un mes un poco frío. No olvides tu abrigo para la noche.</p>
+      <p class="color--blanco margenx5">Gran parte de la celebración es en jardín. Te recomendamos tacón corrido.</p>
+    </div>
+    <article class="containerCli">
+      <div class="weather__header">
+          <form class="weather__search">
+              <input type="text" placeholder="Busca tu ciudad..." class="weather__searchform">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </form> 
+          <div class="weather__units">
+              <span class="weather_unit_celsius">&#176C</span>
+              <span class="weather_unit_farenheit">&#176F</span>
+          </div>
+      </div>
+      <div class="weather__body">
+        <h1 class="weather__city"></h1>
+        <div class="weather__datetime">
+        </div>
+        <div class="centrarV3">
+          <div class="centrarV2">
+            <div class="weather__forecast"></div>
+            <div class="weather__icon"></div>
+          </div>
+          <div class="centrarV2">
+            <p class="weather__temperature"></p>
+            <div class="weather__minmax">
+                <p>Min: 12&#176</p>
+                <p>Max: 16&#176</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="weather__info">
+          <div class="weather__card">
+              <i class="fa-solid fa-temperature-full"></i>
+              <div class="weather__box">
+                  <p>Sensación Térmica</p>
+                  <p class="weather__realfeel">18&#176</p>
+              </div>
+          </div>
+          <div class="weather__card">
+              <i class="fa-solid fa-droplet"></i>
+              <div class="weather__box">
+                  <p>Humedad</p>
+                  <p class="weather__humidity">18&#176</p>
+              </div>
+          </div>
+          <div class="weather__card">
+              <i class="fa-solid fa-wind"></i>
+              <div class="weather__box">
+                  <p>Viento</p>
+                  <p class="weather__wind">18&#176</p>
+              </div>
+          </div>
+          <div class="weather__card">
+              <i class="fa-solid fa-gauge-high"></i>
+              <div class="weather__box">
+                  <p>Presión Atmosférica</p>
+                  <p class="weather__pressure">18&#176</p>
+              </div>
+          </div>
+      </div>
+  </article>
+  </section>
+
+  <section class="caja">
+    <div class="caratula caratula3">
+      <p class="color--blanco caratula1-frase">"Nunca pude estar más de acuerdo con la vida como cuando te trajo a mí"</p>
+    </div>
+  </section>
+
+  <section class="caja detallesBoda">
+    <div class="centrar titSecc">
+      <img src="./assets/divider1a.png">
+      <h1 class="color--blanco">Sugerencias de Hospedaje</h1>
+      <img src="./assets/divider1a.png">
+    </div>
+    <p class="color--blanco margenx5">Ponemos a su disposición la siguiente recomendación de hospedaje para nuestros invitados:</p>
+    <div>
+      <div>
+        <div class="centrarV sombra contHosp">
+          <div class="sombra fotoHosp"></div>
+          <h1 class="color--blanco">Hotel BV Atlixco</h1>
+          <p class="margenx5 color--blanco">Carr. Federal Puebla - Atlixco Km. 27.5, Centro, 74200 Atlixco, Pue.</p>
+          <p class="margenx5 color--blanco">Teléfono: 244 446 9200</p>
+          <p class="margenx5 color--blanco">WhatsApp: 222 671 1758</p>
+          <p class="color--blanco">Código de Descuento: Boda José & Dulce</p>
+          <a class="color--blanco"href="https://www.hotelbvatlixco.com/" target="_blank"><div class="boton">SITIO WEB</div></a>
+          <div class="centrarV map-responsive2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15096.634289408501!2d-98.4106256!3d18.924374!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb5e45f89f4d9%3A0x8684ceec31c20fd6!2sBV%20Hotel%20Atlixco!5e0!3m2!1ses-419!2smx!4v1707771258244!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="centrar titSecc">
+      <img src="./assets/divider1a.png">
+      <h1 class="color--blanco">¿Tienes dudas?</h1>
+      <img src="./assets/divider1a.png">
+    </div>
+    <div class="centrarV">
+      <img class="ico--p" src="./assets/telefono.png">
+      <p class="color--blanco margenx5"> Cualquier duda, favor de contactar a nuestra wedding planner:</p>
+      <a href="https://api.whatsapp.com/send?phone=+525573468813&text=" target="_blank">
+        <div class="color--blanco boton">WHATSAPP</div>
+      </a>
+      <img class="noviosFoto" src="./assets/novios.png">
+    </div>
+  </section>
+
+  <section class="caja frase">
+    <h6 class="color--blanco">"Eres la forma más bonita que ha tenido la vida de enseñarme que vale la pena arriesgarge a amar"</h6>
+  </section>
+
+  <section class="caja">
+    <div class="caratula caratula4">
+      <p class="color--blanco caratula1-frase">"Donde quiera que vayas te seguiré"</p>
+    </div>
+  </section>
+
+  <section class="caja centrarV galeria">
+    <img class="floresAdo" src="./assets/flor1.png">
+    <h1>Nuestros momentos</h1>
+    <article class="contenedor__carrusel">
+      <div class="carrusel" id="carrusel-slider">
+        <section class="slider__section">
+            <img id="fotoGal" src="assets/01A.jpg" alt="novios">
+        </section>
+        <section class="slider__section">
+          <img id="fotoGal" src="assets/01B.jpg" alt="novios">
+        </section>
+        <section class="slider__section">
+          <img id="fotoGal" src="assets/01C.jpg" alt="novios">
+        </section>
+        <section class="slider__section">
+          <img id="fotoGal" src="assets/01D.jpg" alt="novios">
+        </section>
+        <section class="slider__section">
+          <img id="fotoGal" src="assets/1g.jpg" alt="novios">
+      </section>
+      <section class="slider__section">
+          <img id="fotoGal" src="assets/2g.jpg" alt="novios">
+      </section>
+      <section class="slider__section">
+          <img id="fotoGal" src="assets/3g.jpg" alt="novios">
+      </section>
+      <section class="slider__section">
+          <img id="fotoGal" src="assets/4g.jpg" alt="novios">
+      </section>
+      <section class="slider__section">
+          <img id="fotoGal" src="assets/5g.jpg" alt="novios">
+      </section>
+      <section class="slider__section">
+          <img id="fotoGal" src="assets/6g.jpg" alt="novios">
+      </section>
+      <section class="slider__section">
+          <img id="fotoGal" src="assets/7g.jpg" alt="novios">
+      </section>
+      <section class="slider__section">
+          <img id="fotoGal" src="assets/8g.jpeg" alt="novios">
+      </section>
+      <section class="slider__section">
+          <img id="fotoGal" src="assets/9g.jpg" alt="novios">
+      </section>
+      </div>
+      <div class="btn--izquierdo">
+          <span class="fa-solid fa-less-than"></span>
+      </div>
+      <div class="btn--derecho">
+          <span class="fa-solid fa-greater-than"></span>
+      </div>
+  </article>
+  <img class="floresAdo" src="./assets/flor2.png">
+  </section>
+
+  <section class="caja frase">
+    <h6 class="color--blanco">"Andábamos sin buscarnos, pero sabiendo que andábamos para encontrarnos"</h6>
+  </section>
+
+  <section class="caja fogatadaDisplay">
+    <div class="fondo-madera">
+      <div class="centrarV">
+        <h2 class="color--blanco">Los invitamos a nuestra</h2>
+        <img class="cenaFogatadaT" src="./assets/cenaFogatadaT.png">
+        <p class="color--blanco">¡Para celebrar nuestro gran día!</p>
+      </div>
+      <div class="fogatadaDir">
+        <p class="color--blanco margenx5">Los esperamos el</p>
+        <h2 class="color--blanco">Viernes 11 de Octubre</h2>
+        <p class="color--blanco margenx5">A las 18:00 hrs.</p>
+        <p class="color--blanco margenx5 t7">En el hotel Río Atlixco</p>
+        <p class="color--blanco">Camino a Río Nexapa sin número, 74358 Atlixco, Pue.</p>
+        <a href="https://www.google.com/maps/place/Hotel+Río+Atlixco,+camino+a+rio+nexapa+sin+numero,+74358+Atlixco,+Pue./@18.9592126,-98.390083,15z/data=!4m6!3m5!1s0x85cfb7e4e419cf75:0xf34497dfde9f1d09!8m2!3d18.9592126!4d-98.390083!16s%2Fg%2F11tdl6kzxg" target="_blank">
+          <div class="color--blanco boton">UBICACIÓN</div>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+525573468813&text=%C2%A1Hola!%20Confirmo%20mi%20asistencia%20a%20la%20CENA-FOGATADA%20de%20Jos%C3%A9%20y%20Dulce.%20Mi%20nombre%20completo%20es:%20*nombre*%20e%20iremos%20*n%C3%BAm*%20personas." target="_blank">
+          <div class="color--blanco boton1">CONFIRMAR ASISTENCIA</div>
+        </a>
+      </div>
+      <img class="fogata" src="./assets/fogatada.png">
+    </div>
+  </section>
+
+  <section class="caja caratula">
+    <div class="caratula-ondas">
+      <p class="color--blanco caratula1-frase">"Gracias por acompañarnos en este día tan especial"</p>
+      <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="caja centrarV invChic">
+    <p>Elaborado con ❤ por</p>
+    <a href="https://invitacionesdigitaleschic.com/" target="_blank">INVITACIONES DIGITALES CHIC</a>
+    <a href="https://invitacionesdigitaleschic.com/"><img src="./assets/logoChic.png"></a>
+  </footer>
+
+
+
+
+
+
+
+
+  <section class="goTop__container">
+    <div class="goTop__button">
+        <img src="assets/chevron-up-solid.svg" alt="flechaBoton">
+    </div>
+  </section>
+
+  <script src="https://kit.fontawesome.com/caec77cea8.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a692e1c39f.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="clima.js"></script>
+  <script src="./stars.js"></script>
+  <script src="./scroll.js"></script>
+  <script src="./contador.js"></script>
+  <script src="./modal.js"></script>
+  <script src="./player.js"></script>
+  <script src="./loader.js"></script>
+  <script src="./carrusel.js"></script>
+  </body>
+</html>
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    

@@ -1,0 +1,203 @@
+.load__container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./assets/wall1.png);
+  background-size: contain;
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  position: fixed;
+  z-index: 100;
+}
+.stage{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: whoosh-away 1s ease-in-out;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin-round{
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes fly-down{
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes whoosh-away{
+  100% {
+    transform: scale(0,0) translateY(-1000px);
+    opacity: 0;
+  }
+}
+
+.envelope-wrapper{
+  position: relative;
+  height: 200px;
+  width: 280px;
+  animation: fly-down 1s ease-in-out;
+}
+
+.envelope{
+  height: 100%;
+  width: 100%;
+  animation: spin-round 1s ease-in-out
+    ;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  transform-style: preserve-3d;
+}
+
+.envelope-face{
+  position: absolute;
+  height: 100%; 
+  width: 100%;
+}
+
+.envelope-front{
+  position: absolute;
+  z-index: 2;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+
+.envelope-back{
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.loader-finish {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+  transition-delay: 4s;
+}
+
+/* CONTADOR */
+#micontador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color1a);
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+#micontador .num{
+  display: flex;
+  flex-direction:column;
+  border: 1px solid var(--color1);
+  margin: 0 8px;
+  box-shadow: 3px 3px 10px 0px var(--color1);
+}
+#micontador .num .dig{
+  overflow: hidden;
+  padding: 10px;
+  width: 55px;
+}
+#micontador .num .dig span{
+  font-size: 2rem;
+  font-weight: 800px;
+  position: relative;
+}
+#micontador .label{
+  text-align: center;
+  border-top: 1px solid var(--color1);
+  font-weight: normal;
+}
+
+/* BOTON */
+.goTop__container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 5rem;
+  height: 5rem;
+}
+.goTop__button {
+  width: 0rem;
+  height: 0rem;
+  opacity: .5;
+  box-shadow:  0 0 .7em var(--color1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.goTop__button img {
+  width: 90%;
+  padding: 9px 0 0 9px;
+}
+.show {
+  z-index: 10;
+}
+.show .goTop__button {
+  animation: popup .3s ease-in-out;
+  width: 5rem;
+  height: 5rem;
+  z-index: 11;
+}
+@keyframes popup{
+  0%{
+      width: 0rem;
+      height: 0rem;
+  }
+  50%{
+      width: 6rem;
+      height: 6rem;
+  }
+  100%{
+      width: 5rem;
+      height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* RELOJ */
+  #micontador .num{
+      background-color: rgba(244, 234, 244, .4);
+      color: var(--black);
+      width: 40px;
+  }
+  #micontador .num .dig span{
+      font-size: 20px;
+      padding: 0 4px;
+      text-align: center;
+  }
+  #micontador .num .dig{
+      padding: 5px;
+  }
+
+   /* BOTON */
+   .goTop__container {
+    width: 4rem;
+    height: 4rem;
+    right: 1rem;
+    bottom: 1rem;
+}
+.goTop__button {
+    transform: translate(0%, 0%);
+}
+.show .goTop__button {
+    width: 60px;
+    height: 60px;
+}
+}
